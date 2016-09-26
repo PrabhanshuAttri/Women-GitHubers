@@ -8,14 +8,14 @@
     <link rel="shortcut icon" href="images/favicon.ico" />
     <title>Women on GitHub</title>
 
-    <meta name="author" content="Prabhanshu Attri and Fatima Rafiqui">	
-	
-	<meta property="og:type" content="article" />
-	<meta property="og:site_name" content="Women on GitHub" />
-	<meta property="og:title" content="Women on GitHub" />
-	<meta property="og:description" content="Let's collect the data of Women on GitHub, who inspired you to code more, learn more. (Project started by tapasweni-pathak)" />
-	<meta property="og:url" content="https://women-on-github.herokuapp.com/" />
-	<meta property="og:image" content="images/girl_coder.jpg" />
+    <meta name="author" content="Prabhanshu Attri and Fatima Rafiqui">
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Women on GitHub" />
+    <meta property="og:title" content="Women on GitHub" />
+    <meta property="og:description" content="Let's collect the data of Women on GitHub, who inspired you to code more, learn more. (Project started by tapasweni-pathak)" />
+    <meta property="og:url" content="https://women-on-github.herokuapp.com/" />
+    <meta property="og:image" content="images/girl_coder.jpg" />
 
     <!-- Page styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -23,6 +23,18 @@
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-84775604-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
     <?php
     $dsn = "pgsql:"
                 . "host=ec2-54-83-56-31.compute-1.amazonaws.com;"
@@ -295,7 +307,33 @@
       </div>
     </div>
     <script src="material.min.js"></script>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <filter id="shadowed-goo"> <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" /> <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" /> <feGaussianBlur in="goo" stdDeviation="3" result="shadow" /> <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" /> <feOffset in="shadow" dx="1" dy="1" result="shadow" /> <feComposite in2="shadow" in="goo" result="goo" /> <feComposite in2="goo" in="SourceGraphic" result="mix" /> </filter> <filter id="goo"> <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" /> <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" /> <feComposite in2="goo" in="SourceGraphic" result="mix" /> </filter> </defs> </svg>
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <filter id="shadowed-goo"> <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" /> <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" /> <feGaussianBlur in="goo" stdDeviation="3" result="shadow" /> <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" /> <feOffset in="shadow" dx="1" dy="1" result="shadow" /> <feComposite in2="shadow" in="goo" result="goo" /> <feComposite in2="goo" in="SourceGraphic" result="mix" /> </filter> <filter id="goo"> <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" /> <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" /> <feComposite in2="goo" in="SourceGraphic" result="mix" /> </filter> </defs> </svg>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="remodal.min.js"></script>
+  <div class="remodal-overlay remodal-is-closed"></div>
+  <div class="remodal-wrapper remodal-is-closed"><div class="remodal remodal-is-initialized remodal-is-closed" data-remodal-id="modal" aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1">
+      <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+      <div>
+        <h3 id="modalTitle">Thank you for your support</h3>
+        <p id="modalDesc"><img src="images/sleeping.gif" title="Come now, let's give him some rest." style="border-radius: 10px;width: 400px;" /><br/><br/>
+          Our workers are taking rest. Hence this site might contain outdated list.<br>
+          We are renovating this website. Check it out <a href="http://githubble.xyz">here</a>
+        </p>
+      </div>
+      <br>
+      <button id="take-me-there" class="remodal-confirm">Take me there</button>
+    </div></div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      console.log('You seem to be interested in our code. We would be to have some help. Volunteer at https://github/forksociety or https://github/nirmankarta');
+      var inst = $('[data-remodal-id=modal]').remodal();
+      inst.open();
+    });
+
+    $( "#take-me-there" ).on( "click", function(event) {
+      event.preventDefault();
+      window.location = "http://githubble.xyz";
+    });
+    </script>
 </body>
 </html>
